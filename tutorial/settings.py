@@ -67,6 +67,13 @@ ROBOTSTXT_OBEY = True
 #ITEM_PIPELINES = {
 #    'tutorial.pipelines.TutorialPipeline': 300,
 #}
+#数字越小优先级越高
+ITEM_PIPELINES = {
+   'tutorial.pipelines.TutorialPipeline': 300,
+   'tutorial.pipelines.MongoPipeline': 400,
+}
+MONGO_URI='localhost'
+MONGO_DB='tutorial'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
